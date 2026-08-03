@@ -1,6 +1,6 @@
 
-import agenda.model.Contacto; //
-import agenda.service.Agenda;
+import model.Contacto;
+import servicie.Agenda;
 import java.util.Scanner;
 
 public class Main {
