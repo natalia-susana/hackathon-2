@@ -1,7 +1,7 @@
 
 # Agenda de Contactos
  
-> Proyecto desarrollado en el marco de un **Hackathon de Java**, enfocado en la gestión de una agenda telefónica aplicando programación orientada a objetos.
+> Proyecto desarrollado en el marco de un **Hackathon de Java por Generation**, enfocado en la gestión de una agenda telefónica aplicando programación orientada a objetos.
  
 ---
  
@@ -47,11 +47,11 @@ Todas estas funcionalidades pueden probarse mediante un **menú interactivo por 
 Agenda/
 ├── README.md
 └── src/
-    ├── Main.java              # Punto de entrada — menú por consola
+    ├── Main.java              # Punto de entrada — menú de consola
     ├── model/
-    │   └── Contacto.java       # Entidad Contacto
+    │   └── Contacto.java    
     └── service/
-        └── Agenda.java          # Lógica de negocio de la agenda
+        └── Agenda.java        
 ```
 
 ## 🌿 Flujo de trabajo en Git
@@ -67,6 +67,3 @@ Agenda/
  
 Integrantes:
 
- 
-🚧 En desarrollo — proyecto de Hackathon.
- 
