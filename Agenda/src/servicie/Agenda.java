@@ -1,7 +1,9 @@
 package servicie;
+
+import java.util.ArrayList;
 import java.util.HashSet;
 import model.Contacto;
-public class Agenda{
+public class Agenda {
 
 
     private HashSet<Contacto> contactos;
@@ -31,10 +33,12 @@ public class Agenda{
     //Buscar por nombre y apellido, si existe, mostrar telefono
     //Arreglo
     private Contacto[] contactoss;
+
     // Constructor
     public Agenda(int capacidad) {
         this.contactoss = new Contacto[capacidad];
     }
+
     public String buscarContacto(String nombre, String apellido) {
         // Validación
         if (nombre == null || apellido == null || nombre.trim().isEmpty() || apellido.trim().isEmpty()) {
@@ -48,5 +52,33 @@ public class Agenda{
             }
         }
         return "Contacto no encontrado: " + nombre + " " + apellido;
+    }
+
+
+    // eliminarContacto
+// Elimina un contacto de la agenda basándose en la coincidencia de nombre y apellido
+    public void eliminarContacto(Contacto c) {
+        if (c == null) {
+            System.out.println("El contacto proporcionado no es válido.");
+            return;
+        }
+
+        if (contactos.remove(c)) {
+            System.out.println("El contacto fue eliminado exitosamente de la agenda.");
+        } else {
+            System.out.println("No se pudo eliminar: El contacto no fue encontrado en la agenda.");
+        }
+    }
+
+    // agendaLlena
+// Indica si la agenda ha alcanzado su capacidad máxima permitida
+    public boolean agendaLlena() {
+        if (contactos.size() >= capacidadMaxima) {
+            System.out.println("La agenda está llena. No hay espacio disponible para nuevos contactos.");
+            return true;
+        } else {
+            System.out.println("¡La agenda no está llena. Aún hay espacio disponible.");
+            return false;
+        }
     }
 }
