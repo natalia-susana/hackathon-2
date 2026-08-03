@@ -2,6 +2,7 @@ package model;
 
 import java.util.Objects;
 
+
 public class Contacto {
 
     //atributos
