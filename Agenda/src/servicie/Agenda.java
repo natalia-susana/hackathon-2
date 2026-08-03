@@ -1,29 +1,7 @@
 package servicie;
 import java.util.HashSet;
 
-public class Agenda {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+public class Agenda{
 
     //Buscar por nombre y apellido, si existe, mostrar telefono
     //Arreglo
