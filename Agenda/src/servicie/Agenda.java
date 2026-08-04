@@ -30,29 +30,19 @@ public class Agenda{
         }
         return contactos.contains(c);
     }
-
-    //Buscar por nombre y apellido, si existe, mostrar telefono
-    //Arreglo
-    private Contacto[] contactoss;
-
-    // Constructor
-    public Agenda(int capacidad) {
-        this.contactoss = new Contacto[capacidad];
-    }
-
+    //buscar contacto por nombre y apellido, si está, mandarle el número
     public String buscarContacto(String nombre, String apellido) {
         // Validación
         if (nombre == null || apellido == null || nombre.trim().isEmpty() || apellido.trim().isEmpty()) {
             return "El nombre y apellido no pueden estar vacíos.";
         }
-        for (Contacto c : contactoss) {
-            if (c != null) {
-                if (c.getNombre().equalsIgnoreCase(nombre) && c.getApellido().equalsIgnoreCase(apellido)) {
-                    return "Teléfono: " + c.getTelefono();
-                }
+        for (Contacto persona : contactos) {
+            if (persona.getNombre().equalsIgnoreCase(nombre) && persona.getApellido().equalsIgnoreCase(apellido)) {
+                return "Teléfono: " + persona.getTelefono();
             }
         }
-        return "Contacto no encontrado: " + nombre + " " + apellido;
+        //por si no haya a nadie, q no le dé nada al usuario
+        return "No se ha encontrado el contacto: " + nombre + " " + apellido;
     }
 
 
@@ -105,13 +95,10 @@ public class Agenda{
     public String verContactos() {
         contactos.sort(Comparator.comparing(Contacto::getNombre));
 
-        // 2. Acumula los datos en un String
         String resultado = "";
         for (Contacto c : contactos) {
             resultado += "Nombre: " + c.getNombre() + ", Apellido: " + c.getApellido() + "\n";
         }
-
-        // 3. Retorna el resultado final
         return resultado;
     }
     // agendaLlena
@@ -124,5 +111,13 @@ public class Agenda{
             System.out.println("¡La agenda no está llena. Aún hay espacio disponible.");
             return false;
         }
+    }
+    public int espacioLibres() {
+        // contactos.size() nos da el número actual de elementos en la lista, q no se te olvide
+        int ocupados = contactos.size();
+        // saber la diferencia con una resta al total
+        int disponibles = capacidadMaxima - ocupados;
+        System.out.println("Espacios disponibles en la agenda: " + disponibles);
+        return disponibles;
     }
 }
