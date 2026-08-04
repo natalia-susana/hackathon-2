@@ -1,18 +1,19 @@
-package Agenda.src.servicie;
+package servicie;
 
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
 import model.Contacto;
 
 public class Agenda{
 
 
-    private List<Contacto> contactos;
+    private HashSet<Contacto> contactos;
     private int capacidadMaxima;
 
     // Asignar capacidad máxima en 10
     public Agenda() {
-        contactos = new ArrayList<>();
+        contactos = new HashSet<>();
         capacidadMaxima = 10;
     }
 
@@ -99,19 +100,6 @@ public class Agenda{
 
         //si nombre y apellido no hacen match con los contactos guardados, enviamos mensaje
         System.out.println("Ese contacto no existe en tu agenda.");
-    }
-
-    //metodo para imprimir todos los contactos ordenados
-    public String verContactos() {
-        contactos.sort(Comparator.comparing(Contacto::getNombre));
-
-        String resultado = "";
-
-        for(Contacto c : contactos) {
-            resultado += c.getNombre() + c.getApellido();
-        }
-
-        return resultado;
     }
 
 
