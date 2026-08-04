@@ -1,20 +1,29 @@
 package servicie;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+
+import java.util.List;
+
 import java.util.Scanner;
+
 import model.Contacto;
 
 public class Agenda{
 
 
-    private HashSet<Contacto> contactos;
+    private List<Contacto> contactos;
     private int capacidadMaxima;
 
     // Asignar capacidad máxima en 10
     public Agenda() {
-        contactos = new HashSet<>();
-        capacidadMaxima = 10;
+        this.contactos = new ArrayList<>();
+        this.capacidadMaxima = 10;
+    }
+
+    // Constructor con tamaño personalizado
+    public Agenda(int capacidad) {
+        this.contactos = new ArrayList<>();
+        this.capacidadMaxima = capacidad > 0 ? capacidad : 10;
     }
 
     // Método para agregar contactos
@@ -36,10 +45,6 @@ public class Agenda{
     //Arreglo
     private Contacto[] contactoss;
 
-    // Constructor
-    public Agenda(int capacidad) {
-        this.contactoss = new Contacto[capacidad];
-    }
 
     public String buscarContacto(String nombre, String apellido) {
         // Validación
