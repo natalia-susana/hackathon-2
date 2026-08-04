@@ -1,19 +1,18 @@
 package servicie;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Scanner;
+import java.util.*;
+
 import model.Contacto;
 
 public class Agenda{
 
 
-    private HashSet<Contacto> contactos;
+    private List<Contacto> contactos;
     private int capacidadMaxima;
 
     // Asignar capacidad máxima en 10
     public Agenda() {
-        contactos = new HashSet<>();
+        contactos = new ArrayList<>();
         capacidadMaxima = 10;
     }
 
@@ -102,7 +101,19 @@ public class Agenda{
         System.out.println("Ese contacto no existe en tu agenda.");
     }
 
+    //metodo imprimir contactos
+    public String verContactos() {
+        contactos.sort(Comparator.comparing(Contacto::getNombre));
 
+        // 2. Acumula los datos en un String
+        String resultado = "";
+        for (Contacto c : contactos) {
+            resultado += "Nombre: " + c.getNombre() + ", Apellido: " + c.getApellido() + "\n";
+        }
+
+        // 3. Retorna el resultado final
+        return resultado;
+    }
     // agendaLlena
     // Indica si la agenda ha alcanzado su capacidad máxima permitida
     public boolean agendaLlena() {
