@@ -2,10 +2,11 @@
 # Agenda de Contactos
  
 > Proyecto desarrollado en el marco de un **Hackathon de Java por Generation**, enfocado en la gestión de una agenda telefónica aplicando programación orientada a objetos.
+> Utilizando la metodología SCRUM.
  
 ---
  
-## 🎯 Objetivo
+## Objetivo
  
 Diseñar e implementar un sistema de gestión de contactos que permita administrar una agenda telefónica de forma eficiente, aplicando principios de **POO** (clases, encapsulamiento, colecciones) y buenas prácticas de código limpio, como parte de un ejercicio colaborativo en equipo bajo un flujo de trabajo real con Git y GitHub. Utilizando la metodología SCRUM.
  
@@ -16,7 +17,7 @@ El proyecto busca poner en práctica:
 - Práctica de control de versiones (ramas, Pull Requests).
 ---
  
-## 📖 Descripción del programa
+## Descripción del programa
  
 Cada contacto está definido por **nombre**, **apellido** y **teléfono**. Dos contactos se consideran iguales cuando comparten nombre y apellido, sin distinguir entre mayúsculas y minúsculas; el teléfono no forma parte de esa comparación.
  
@@ -41,7 +42,7 @@ Todas estas funcionalidades pueden probarse mediante un **menú interactivo por 
  
 ---
  
-## 🏗️ Estructura del proyecto
+## Estructura del proyecto
  
 ```
 Agenda/
@@ -54,7 +55,7 @@ Agenda/
         └── Agenda.java        
 ```
 
-## 🌿 Flujo de trabajo en Git
+## Flujo de trabajo en Git
  
 | Rama | Propósito |
 |---|---|
@@ -66,4 +67,10 @@ Agenda/
 ## Colaboradores
  
 Integrantes:
+-  Natalia Cruz
+-  Karen Luna
+-  Ernesto Nava
+-  Missael Manjarrez
+-  Elios Martínez
+-  Oscar Miranda
 
