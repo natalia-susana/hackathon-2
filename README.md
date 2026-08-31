@@ -1,7 +1,7 @@
 
 # Agenda de Contactos
  
-> Proyecto desarrollado en el marco de un **Hackathon de Java por Generation**, enfocado en la gestión de una agenda telefónica aplicando programación orientada a objetos.
+> Proyecto desarrollado en el marco de un **Hackathon de Java por Generation Mexico**, enfocado en la gestión de una agenda telefónica aplicando programación orientada a objetos.
 > Utilizando la metodología SCRUM.
  
 ---
@@ -67,10 +67,11 @@ Agenda/
 ## Colaboradores
  
 Integrantes:
--  Natalia Cruz
--  Karen Luna
--  Ernesto Nava
--  Missael Manjarrez
 -  Elios Martínez
+-  Ernesto Nava
+-  Karen Luna
+-  Milett López
+-  Missael Manjarrez
+-  Natalia Cruz
 -  Oscar Miranda
 
